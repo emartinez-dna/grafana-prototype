@@ -1,0 +1,1 @@
+This server will act as a dummy metrics server.  It will just be an nginx server that serves static metrics information for consumption by prometheus.

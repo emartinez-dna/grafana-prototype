@@ -1,0 +1,8 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  metrics:
+    build: projects/metrics
+    ports:
+      - "9090:80"
+    volumes:
+      - "${HOST_WORKSPACE_FOLDER}/projects/metrics/src:/usr/share/nginx/html"

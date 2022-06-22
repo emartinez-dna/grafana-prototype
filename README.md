@@ -1,0 +1,1 @@
+To start the development environment, run `docker compose up -d`.

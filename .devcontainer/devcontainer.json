@@ -9,13 +9,19 @@
 		"args": { "VARIANT": "ubuntu-22.04" }
 	},
 	"mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"],
-	"runArgs": ["-e", "CONTAINER_WORKSPACE_FOLDER=${containerWorkspaceFolder}"]//,
+	"runArgs": [
+		"-e", "CONTAINER_WORKSPACE_FOLDER=${containerWorkspaceFolder}", 
+		"-e", "HOST_WORKSPACE_FOLDER=${localWorkspaceFolder}"
+	],
+	"remoteEnv": {
+		"PATH": "${containerEnv:PATH}:${containerEnv:CONTAINER_WORKSPACE_FOLDER}/auto"
+	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
+	"postCreateCommand": "for file in `ls $CONTAINER_WORKSPACE_FOLDER/auto`; do chmod +x $CONTAINER_WORKSPACE_FOLDER/auto/$file; done;"//,
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	//"remoteUser": "vscode"

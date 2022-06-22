@@ -1,0 +1,4 @@
+#! /bin/bash
+pushd $CONTAINER_WORKSPACE_FOLDER
+docker-compose up -d
+popd > /dev/null

@@ -5,7 +5,7 @@
 
 # Getting Started #
 
-1. Open this solution in Visual Studio Code.
+1. Open this repository in Visual Studio Code.
 1. When prompted, reopen the workspace in a development container.
 1. Open a terminal.
 1. Run `start-solution`.  

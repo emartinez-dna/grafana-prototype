@@ -8,7 +8,7 @@
 		// Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
 		"args": { "VARIANT": "ubuntu-22.04" }
 	},
-	"mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"],
+	"mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind", "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind"],
 	"runArgs": [
 		"-e", "CONTAINER_WORKSPACE_FOLDER=${containerWorkspaceFolder}", 
 		"-e", "HOST_WORKSPACE_FOLDER=${localWorkspaceFolder}"

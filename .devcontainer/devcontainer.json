@@ -8,13 +8,16 @@
 		// Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
 		"args": { "VARIANT": "ubuntu-22.04" }
 	},
-	"mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind", "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind"],
+	"mounts": [ 
+		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind", 	// This is here so that your development container can interact directly with your physical computer's docker daemon.
+		"source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind" 				// Makes it easier to push to github from within your container, assuming you're using ssh to do so.
+	],
 	"runArgs": [
-		"-e", "CONTAINER_WORKSPACE_FOLDER=${containerWorkspaceFolder}", 
-		"-e", "HOST_WORKSPACE_FOLDER=${localWorkspaceFolder}"
+		"-e", "CONTAINER_WORKSPACE_FOLDER=${containerWorkspaceFolder}", // This is to help various scripts keep a reference to where your code is located in the container.
+		"-e", "HOST_WORKSPACE_FOLDER=${localWorkspaceFolder}"			// This is to help various scripts keep a reference to where yoru code is located on your physical machine.
 	],
 	"remoteEnv": {
-		"PATH": "${containerEnv:PATH}:${containerEnv:CONTAINER_WORKSPACE_FOLDER}/auto"
+		"PATH": "${containerEnv:PATH}:${containerEnv:CONTAINER_WORKSPACE_FOLDER}/auto" // Adds your repo's auto folder to the PATH so that it's easier to execute utility commands.
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

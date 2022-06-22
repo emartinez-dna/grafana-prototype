@@ -1,4 +1,5 @@
 #! /bin/bash
 pushd $CONTAINER_WORKSPACE_FOLDER
+docker-compose build
 docker-compose up -d
 popd > /dev/null

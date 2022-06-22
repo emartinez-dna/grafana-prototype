@@ -6,3 +6,7 @@ services:
       - "9090:80"
     volumes:
       - "${HOST_WORKSPACE_FOLDER}/projects/metrics/src:/usr/share/nginx/html"
+  grafana:
+    build: projects/grafana
+    ports:
+      - "3000:3000"

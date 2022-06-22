@@ -1,6 +1,14 @@
+# Prerequisites #
+* Docker Desktop (available on [homebrew](https://formulae.brew.sh/formula/docker#default) or [official site](https://www.docker.com/products/docker-desktop/))
+* Visual Studio Code (available on [homebrew](https://formulae.brew.sh/cask/visual-studio-code#default) or [official site](https://code.visualstudio.com/download))
+* [VS Code Remote Development Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+
 # Getting Started #
 
-To get started, run `start-solution`.  
+1. Open this solution in Visual Studio Code.
+1. When prompted, reopen the workspace in a development container.
+1. Open a terminal.
+1. Run `start-solution`.  
 
 This will spin up all of the solution's docker containers on your physical machine's docker engine.  Likewise, to stop your solution's containers, run `stop-solution`.
 

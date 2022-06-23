@@ -1,0 +1,41 @@
+projectName=$1
+
+if [ -z $projectName ]
+then
+    echo "Please provide a projectName and try again."
+else
+    projectPath="${CONTAINER_WORKSPACE_FOLDER}/projects/${projectName}"
+    buildScriptPath="${projectPath}/auto/build.sh"
+    releaseScriptPath="${projectPath}/auto/release.sh"
+    projectSourceFolder="${projectPath}/src"
+    if [ -f $buildScriptPath ]
+    then
+        echo "Watching $projectName. CTRL+C to exit."
+        echo ""
+        echo ""
+
+        while true
+        do
+            startTime=`date +%s`
+
+            echo "=== `date '+%F %H:%M:%S'` CHANGE DETECTED ==="
+            echo "Executing $buildScriptPath"
+            bash "$buildScriptPath"
+
+            if [ -f $releaseScriptPath ]
+            then
+                echo "Executing $releaseScriptPath"
+                bash "$releaseScriptPath"
+            fi
+
+            endTime=`date +%s`
+            echo "=== `date '+%F %H:%M:%S'` DONE ($(($endTime - $startTime)) seconds) ==="
+            echo ""
+            echo ""
+
+            inotifywait -re create,modify,delete "$projectSourceFolder" --quiet --quiet
+        done
+    else
+        echo "$projectName does not seem to be buildable.  To make it buildable, please create $buildScriptPath and within provide a build script."
+    fi
+fi

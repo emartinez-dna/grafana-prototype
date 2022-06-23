@@ -25,3 +25,6 @@ RUN apt-get update && apt-get install
 
 # install docker compose
 RUN apt-get install docker-compose -y
+
+# install inotifywait for the file watcher
+RUN apt-get install inotify-tools -y

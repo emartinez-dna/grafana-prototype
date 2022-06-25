@@ -27,4 +27,7 @@ RUN apt-get update && apt-get install
 RUN apt-get install docker-compose -y
 
 # install inotifywait for the file watcher
-RUN apt-get install inotify-tools -y
+RUN apt-get install -y inotify-tools
+
+# install jsonnet
+RUN apt-get install -y jsonnet

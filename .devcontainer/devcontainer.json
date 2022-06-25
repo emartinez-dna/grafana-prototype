@@ -17,7 +17,7 @@
 		"-e", "HOST_WORKSPACE_FOLDER=${localWorkspaceFolder}"			// This is to help various scripts keep a reference to where yoru code is located on your physical machine.
 	],
 	"remoteEnv": {
-		"PATH": "${containerEnv:PATH}:${containerEnv:CONTAINER_WORKSPACE_FOLDER}/auto" // Adds your repo's auto folder to the PATH so that it's easier to execute utility commands.
+		"PATH": "${containerEnv:PATH}:${containerEnv:CONTAINER_WORKSPACE_FOLDER}/auto:/root/go/bin" // Adds your repo's auto folder to the PATH so that it's easier to execute utility commands.
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

@@ -1,14 +1,13 @@
 projectName=$1
 
-if [ -z $projectName ]
+source "${CONTAINER_WORKSPACE_FOLDER}/auto/_utils.sh"
+sourcePath="`get-projectpath $projectName`/src"
+sourcePathExitCode=$?
+if [ "$sourcePathExitCode" -gt 0 ]
 then
-    echo "Please provide a projectName and try again."
+    echo "Unable to determine path to source: $sourcePath"
 else
-    projectPath="${CONTAINER_WORKSPACE_FOLDER}/projects/${projectName}"
-    buildScriptPath="${projectPath}/auto/build.sh"
-    releaseScriptPath="${projectPath}/auto/release.sh"
-    projectSourceFolder="${projectPath}/src"
-    if [ -f $buildScriptPath ]
+    if [ -d "$sourcePath" ]
     then
         echo "Watching $projectName. CTRL+C to exit."
         echo ""
@@ -17,25 +16,19 @@ else
         while true
         do
             startTime=`date +%s`
-
             echo "=== `date '+%F %H:%M:%S'` CHANGE DETECTED ==="
-            echo "Executing $buildScriptPath"
-            bash "$buildScriptPath"
-
-            if [ -f $releaseScriptPath ]
-            then
-                echo "Executing $releaseScriptPath"
-                bash "$releaseScriptPath"
-            fi
-
+            build-project $projectName
+            release-project $projectName
             endTime=`date +%s`
             echo "=== `date '+%F %H:%M:%S'` DONE ($(($endTime - $startTime)) seconds) ==="
             echo ""
             echo ""
 
-            inotifywait -re create,modify,delete "$projectSourceFolder" --quiet --quiet
+            # this is the part that watches for changes.  It will sit here until a change is detected, 
+            # then it will exit that program and go through the loop one more time.
+            inotifywait -re create,modify,delete "$sourcePath" --quiet --quiet
         done
     else
-        echo "$projectName does not seem to be buildable.  To make it buildable, please create $buildScriptPath and within provide a build script."
+        echo "In order to watch a project, it needs to contain a src folder.  Please create "$sourcePath". "
     fi
 fi

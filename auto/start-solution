@@ -1,5 +1,18 @@
 #! /bin/bash
+
+source "${CONTAINER_WORKSPACE_FOLDER}/auto/_utils.sh"
+projects=`get-projects`
+for project in $projects
+do
+    build-project $project
+done
+
 pushd $CONTAINER_WORKSPACE_FOLDER
 docker-compose build
 docker-compose up -d
 popd > /dev/null
+
+for project in $projects
+do
+    release-project $project
+done

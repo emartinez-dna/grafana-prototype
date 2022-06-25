@@ -3,9 +3,13 @@ services:
   metrics:
     build: projects/metrics
     ports:
-      - "9090:80"
+      - "8083:80"
     volumes:
       - "${HOST_WORKSPACE_FOLDER}/projects/metrics/src:/usr/share/nginx/html"
+  prometheus:
+    build: projects/prometheus
+    ports:
+      - "9090:9090"
   grafana:
     build: projects/grafana
     ports:

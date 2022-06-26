@@ -3,10 +3,7 @@
 projectName=$1
 action=$2
 
-source "${CONTAINER_WORKSPACE_FOLDER}/auto/_utils.sh"
-
-if [ -z $projectName ] || [ -z $action ] || [ $projectName == 'help' ]
-then
+printHelp() {
     echo "project ls"
     echo "- Lists all projects in the solution."
     echo ""
@@ -17,8 +14,18 @@ then
     echo "- Performs an action on a single project."
     echo "- An action is defined as a sh script in the auto folder of each project."
     echo "- Example: project grafana build, because there exists projects/grafana/auto/build.sh"
+}
+
+source "${CONTAINER_WORKSPACE_FOLDER}/auto/_utils.sh"
+
+if [ -z $projectName ] || [ $projectName == 'help' ]
+then
+    printHelp
 else
     case "$projectName" in
+        "")
+            printHelp
+            ;;
         ls)
             get-projects;
             ;;

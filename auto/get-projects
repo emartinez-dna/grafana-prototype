@@ -1,3 +1,0 @@
-source "${CONTAINER_WORKSPACE_FOLDER}/auto/_utils.sh"
-
-get-projects

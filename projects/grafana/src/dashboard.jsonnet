@@ -1,2 +1,2 @@
 local grafana = import 'grafonnet/grafana.libsonnet';
-grafana.dashboard.new('Empty Dashboard')
+grafana.dashboard.new('Edgars Dashboard')

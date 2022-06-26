@@ -1,0 +1,43 @@
+#! /bin/bash
+
+action=$1
+
+source "${CONTAINER_WORKSPACE_FOLDER}/auto/_utils.sh"
+
+case $action in
+    help)
+        echo "solution start"
+        echo "- Build your projects, spin up all containers using docker compose, then publish any assets as necessary."
+        echo ""
+        echo "solution stop"
+        echo "- Stop all containers running in your docker composition."
+        echo ""
+        echo "solution help"
+        echo "- Print this help message."
+        ;;
+    start)
+        projects=`get-projects`
+        for project in $projects
+        do
+            build-project $project
+        done
+
+        pushd $CONTAINER_WORKSPACE_FOLDER
+        docker-compose build
+        docker-compose up -d
+        popd > /dev/null
+
+        for project in $projects
+        do
+            release-project $project
+        done
+        ;;
+    stop)
+        pushd $CONTAINER_WORKSPACE_FOLDER
+        docker-compose down
+        popd > /dev/null
+        ;;
+    *)
+        echo "$action is not a valid solution action."
+        ;;
+esac

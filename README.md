@@ -8,7 +8,7 @@
 1. Open this repository in Visual Studio Code.
 1. When prompted, reopen the workspace in a development container.
 1. Open a terminal.
-1. Run `start-solution`.  
+1. Run `solution start`.  
 
 This will spin up all of the solution's docker containers on your physical machine's docker engine.  Likewise, to stop your solution's containers, run `stop-solution`.
 
@@ -22,3 +22,10 @@ The grafana endpoint is hosted at http://localhost:3000.  To log in for the firs
 After logging in, you will be asked to update your password.  You can either update it to whatever you want or click the "Skip" button.
 
 If you need to update the grafana server configuration, modify projects/grafana/grafana.ini and re-run `start-solution`.
+
+# Developing #
+The focus of this project is to develop grafana dashboards.  For an ergonomic workflow, you can watch for changes in the grafana project, which will automatically build and push your changes to the grafana endpoint.
+
+To do that, run `project grafana watch`.
+
+Happy coding!

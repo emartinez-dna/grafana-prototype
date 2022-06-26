@@ -1,4 +1,0 @@
-#! /bin/bash
-pushd $CONTAINER_WORKSPACE_FOLDER
-docker-compose down
-popd > /dev/null

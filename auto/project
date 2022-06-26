@@ -1,0 +1,67 @@
+#! /bin/bash
+
+projectName=$1
+action=$2
+
+source "${CONTAINER_WORKSPACE_FOLDER}/auto/_utils.sh"
+
+if [ -z $projectName ] || [ -z $action ] || [ $projectName == 'help' ]
+then
+    echo "project ls"
+    echo "- Lists all projects in the solution."
+    echo ""
+    echo "project <projectName> watch"
+    echo "- Build, releases, then watches for file changes on a project's src folder."
+    echo ""
+    echo "project <projectName> <action>"
+    echo "- Performs an action on a single project."
+    echo "- An action is defined as a sh script in the auto folder of each project."
+    echo "- Example: project grafana build, because there exists projects/grafana/auto/build.sh"
+else
+    case "$projectName" in
+        ls)
+            get-projects;
+            ;;
+        *)
+            case $action in 
+                watch)
+                    sourcePath="`get-projectpath $projectName`/src"
+                    sourcePathExitCode=$?
+
+                    if [ "$sourcePathExitCode" -gt 0 ]
+                    then
+                        echo "Unable to determine path to source: $sourcePath"
+                    else
+                        if [ -d "$sourcePath" ]
+                        then
+                            echo "Watching $projectName. CTRL+C to exit."
+                            echo ""
+                            echo ""
+
+                            while true
+                            do
+                                startTime=`date +%s`
+                                echo "=== `date '+%F %H:%M:%S'` CHANGE DETECTED ==="
+                                build-project $projectName
+                                release-project $projectName
+                                endTime=`date +%s`
+                                echo "=== `date '+%F %H:%M:%S'` DONE ($(($endTime - $startTime)) seconds) ==="
+                                echo ""
+                                echo ""
+
+                                # this is the part that watches for changes.  It will sit here until a change is detected, 
+                                # then it will exit that program and go through the loop one more time.
+                                inotifywait -re create,modify,delete "$sourcePath" --quiet --quiet
+                            done
+                        else
+                            echo "In order to watch a project, it needs to contain a src folder.  Please create "$sourcePath". "
+                        fi
+                    fi
+                    ;;
+                *)
+                    bash -c "`generate-action $action $projectName`"
+                    ;;
+            esac
+            ;;
+    esac
+fi

@@ -19,7 +19,7 @@
 	"remoteEnv": {
 		"PATH": "${containerEnv:PATH}:${containerEnv:CONTAINER_WORKSPACE_FOLDER}/auto:/root/go/bin" // Adds your repo's auto folder to the PATH so that it's easier to execute utility commands.
 	},
-
+	"extensions": ["xrc-inc.jsonnet-formatter"],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 

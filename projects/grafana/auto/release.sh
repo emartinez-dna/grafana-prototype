@@ -9,7 +9,14 @@ distPath=`realpath $scriptPath/../dist`
 
 pushd $distPath
 
-for jsonFile in `ls $distPath | grep '.*\.json'`
+# first post data sources
+for jsonFile in `ls $distPath/datasources | grep '.*\.json'`
+do
+    :
+done
+
+# second post dashboards
+for jsonFile in `find $distPath/dashboards | grep '.*\.json'`
 do
     echo "POSTing $jsonFile to $destination"
     payload="{\"dashboard\": $(jq . $jsonFile), \"overwrite\": true}"

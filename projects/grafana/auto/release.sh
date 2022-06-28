@@ -7,26 +7,38 @@ protocol="${5:-http}"
 scriptPath=`dirname $BASH_SOURCE`
 distPath=`realpath $scriptPath/../dist`
 
-pushd $distPath
+restCommand() {
+    payload=$1
+    urlSegment=$2
+    method="${3:-GET}"
 
-# first post data sources
-for jsonFile in `ls $distPath/datasources | grep '.*\.json'`
-do
-    :
-done
+    fullUrl="$protocol://$username:$password@$destination/$urlSegment"
 
-# second post dashboards
-for jsonFile in `find $distPath/dashboards | grep '.*\.json'`
-do
-    echo "POSTing $jsonFile to $destination"
-    payload="{\"dashboard\": $(jq . $jsonFile), \"overwrite\": true}"
+    echo "${method}ing $fullUrl"
 
-    fullUrl="$protocol://$username:$password@$destination/api/dashboards/db"
-
-    curl -X POST \
+    curl -X $method \
         -H 'Content-Type: application/json' \
         -d "${payload}" \
        $fullUrl
+}
+
+pushd $distPath
+
+# update data sources first.
+for jsonFile in `find $distPath/datasources | grep '.*\.json'`
+do
+    # delete each data source if it exists
+    restCommand '' "api/datasources/name/`jq -r '.name' $jsonFile`" 'DELETE'
+
+    # redeploy it.
+    restCommand "$(jq . $jsonFile)" 'api/datasources' 'POST'
+done
+
+# update dashboards next
+for jsonFile in `find $distPath/dashboards | grep '.*\.json'`
+do
+    payload=
+    restCommand "{\"dashboard\": $(jq . $jsonFile), \"overwrite\": true}" 'api/dashboards/db' 'POST'
 done
 
 popd

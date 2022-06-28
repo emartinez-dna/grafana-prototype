@@ -1,0 +1,7 @@
+{
+    "name":"Prometheus",
+    "type":"prometheus",
+    "url":"https://prometheus-dev.internal.dnanexus.com",
+    "access":"proxy",
+    "basicAuth":false
+}

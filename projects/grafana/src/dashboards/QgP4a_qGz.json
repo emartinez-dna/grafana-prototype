@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "type": "db",
+    "canSave": false,
+    "canEdit": false,
+    "canAdmin": false,
+    "canStar": false,
+    "canDelete": false,
+    "slug": "bnazarenko",
+    "url": "/dashboards/f/QgP4a_qGz/bnazarenko",
+    "expires": "0001-01-01T00:00:00Z",
+    "created": "2021-05-27T21:16:05Z",
+    "updated": "2021-05-27T21:26:33Z",
+    "updatedBy": "bnazarenko@dnanexus.com",
+    "createdBy": "bnazarenko@dnanexus.com",
+    "version": 2,
+    "hasAcl": false,
+    "isFolder": true,
+    "folderId": 0,
+    "folderUid": "",
+    "folderTitle": "General",
+    "folderUrl": "",
+    "provisioned": false,
+    "provisionedExternalId": "",
+    "annotationsPermissions": {
+      "dashboard": {
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
+      },
+      "organization": {
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
+      }
+    }
+  },
+  "dashboard": {
+    "id": 89,
+    "schemaVersion": 17,
+    "title": "bnazarenko",
+    "uid": "QgP4a_qGz",
+    "version": 2
+  }
+}

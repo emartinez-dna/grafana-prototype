@@ -36,3 +36,6 @@ RUN apt-get install -y inotify-tools
 
 # install jsonnet
 RUN apt-get install -y jsonnet
+
+# install 
+RUN apt-get install parallel -y

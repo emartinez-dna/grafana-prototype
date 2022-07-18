@@ -14,8 +14,8 @@ generate-action() {
     action=$1
     projectName=$2
     cat << EOF
-    projectPath=`get-projectpath $projectName`
-    projectPathExitCode=\$?
+    projectPath="`get-projectpath $projectName`"
+    projectPathExitCode=$?
     
     if [ \$projectPathExitCode -gt 0 ]
     then
@@ -25,7 +25,7 @@ generate-action() {
         scriptPath="\${projectPath}/auto/$action.sh"
         if [ -f \$scriptPath ]
         then
-            bash \$scriptPath
+            bash \$scriptPath ${@:3}
         else
             echo "- \$scriptPath not found.  Skipping."
         fi

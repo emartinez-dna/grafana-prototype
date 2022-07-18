@@ -30,6 +30,7 @@ else
             get-projects;
             ;;
         *)
+            additional_arguments=`printf " '%s' " ${@:3}`
             case $action in 
                 watch)
                     sourcePath="`get-projectpath $projectName`/src"
@@ -66,7 +67,7 @@ else
                     fi
                     ;;
                 *)
-                    bash -c "`generate-action $action $projectName`"
+                    bash -c "`generate-action $action $projectName $additional_arguments`"
                     ;;
             esac
             ;;

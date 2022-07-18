@@ -7,20 +7,7 @@ protocol="${5:-http}"
 scriptPath=`dirname $BASH_SOURCE`
 distPath=`realpath $scriptPath/../dist`
 
-restCommand() {
-    payload=$1
-    urlSegment=$2
-    method="${3:-GET}"
-
-    fullUrl="$protocol://$username:$password@$destination/$urlSegment"
-
-    echo "${method}ing $fullUrl"
-
-    curl -X $method \
-        -H 'Content-Type: application/json' \
-        -d "${payload}" \
-       $fullUrl
-}
+source "$scriptPath/core.sh"
 
 pushd $distPath
 
@@ -28,17 +15,16 @@ pushd $distPath
 for jsonFile in `find $distPath/datasources | grep '.*\.json'`
 do
     # delete each data source if it exists
-    restCommand '' "api/datasources/name/`jq -r '.name' $jsonFile`" 'DELETE'
+    restCommand $username $password $protocol $destination '' "api/datasources/name/`jq -r '.name' $jsonFile`" 'DELETE'
 
     # redeploy it.
-    restCommand "$(jq . $jsonFile)" 'api/datasources' 'POST'
+    restCommand $username $password $protocol $destination "$(jq . $jsonFile)" 'api/datasources' 'POST'
 done
 
 # update dashboards next
 for jsonFile in `find $distPath/dashboards | grep '.*\.json'`
 do
-    payload=
-    restCommand "{\"dashboard\": $(jq . $jsonFile), \"overwrite\": true}" 'api/dashboards/db' 'POST'
+    restCommand $username $password $protocol $destination "{\"dashboard\": $(jq . $jsonFile), \"overwrite\": true}" 'api/dashboards/db' 'POST'
 done
 
 popd

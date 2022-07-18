@@ -1,0 +1,7 @@
+{
+    "name":"Test_Data_Prometheus",
+    "type":"prometheus",
+    "url":"http://host.docker.internal:9090",
+    "access":"proxy",
+    "basicAuth":false
+} 

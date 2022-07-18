@@ -25,7 +25,6 @@ generate-action() {
         scriptPath="\${projectPath}/auto/$action.sh"
         if [ -f \$scriptPath ]
         then
-            echo "- Executing \$scriptPath"
             bash \$scriptPath
         else
             echo "- \$scriptPath not found.  Skipping."

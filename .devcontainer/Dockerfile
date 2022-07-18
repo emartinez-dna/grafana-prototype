@@ -8,7 +8,14 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
-# install docker CLI for interacting with the host machine docker daemon
+# install docker CLI by directly downloading the binaries, without also installing the docker engine.
+ENV DOCKERVERSION=20.10.17
+RUN curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKERVERSION}.tgz \
+  && tar xzvf docker-${DOCKERVERSION}.tgz --strip 1 \
+                 -C /usr/local/bin docker/docker \
+  && rm docker-${DOCKERVERSION}.tgz
+
+# Set up apt in order to apt-get install docker-compose.
 RUN apt-get update
 RUN apt-get install \
     ca-certificates \
@@ -20,8 +27,6 @@ RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /
 RUN echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-RUN apt-get update && apt-get install 
 
 # install docker compose
 RUN apt-get install docker-compose -y

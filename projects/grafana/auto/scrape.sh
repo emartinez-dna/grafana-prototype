@@ -23,7 +23,8 @@ declare -a parallelized_commands=()
 for uid in $uids
 do
     # for every command, import core.sh and execute the restCommand for pulling the dashboard json by uid.
-    parallelized_commands+=("source $scriptPath/core.sh; restCommand '$username' '$password' '$protocol' '$destination' '' 'api/dashboards/uid/$uid' 'GET' | jq > '$out_dir/$uid.json'")
+    # we run the resulting json through jq and make sure to remove the id field.  This id field wouldn't persist across environments, so we want to avoid capturing that in the source code.
+    parallelized_commands+=("source $scriptPath/core.sh; restCommand '$username' '$password' '$protocol' '$destination' '' 'api/dashboards/uid/$uid' 'GET' | jq 'del(.dashboard.id)' > '$out_dir/$uid.json'")
 done
 
 num_cores=`nproc --all`

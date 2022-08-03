@@ -21,9 +21,8 @@ restCommand() {
     fi
 
     fullUrl="$protocol://$authorization_section@$destination/$urlSegment"
-    
     curl --silent -X $method \
-    -H 'Content-Type: application/json' \
-    -d "${payload}" \
-    "$fullUrl"
+        -H 'Content-Type: application/json' \
+        -d "${payload}" \
+        "$fullUrl"
 }

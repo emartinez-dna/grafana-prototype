@@ -1,0 +1,25 @@
+{
+  "uid": "F4oM36Dnk",
+  "orgId": 1,
+  "name": "Prometheus-Local",
+  "type": "prometheus",
+  "typeName": "Prometheus",
+  "typeLogoUrl": "public/app/plugins/datasource/prometheus/img/prometheus_logo.svg",
+  "access": "proxy",
+  "url": "https://fips_nginx_prometheus",
+  "user": "",
+  "database": "",
+  "basicAuth": false,
+  "isDefault": false,
+  "jsonData": {
+    "exemplarTraceIdDestinations": [
+      {
+        "name": "traceID"
+      }
+    ],
+    "httpMethod": "POST",
+    "manageAlerts": true,
+    "tlsSkipVerify": true
+  },
+  "readOnly": false
+}

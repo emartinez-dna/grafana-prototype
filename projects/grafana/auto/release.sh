@@ -24,7 +24,7 @@ done
 # update dashboards next
 for jsonFile in `find $distPath/dashboards | grep '.*\.json'`
 do
-    restCommand $username $password $protocol $destination "{\"dashboard\": $(jq . $jsonFile), \"overwrite\": true}" 'api/dashboards/db' 'POST'
+    restCommand $username $password $protocol $destination "`cat $jsonFile | jq '. + { overwrite: true }'`" 'api/dashboards/db' 'POST'
 done
 
 popd

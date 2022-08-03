@@ -10,10 +10,10 @@
     "url": "/d/O3vVLqX7k/bastion-certificates",
     "expires": "0001-01-01T00:00:00Z",
     "created": "2022-05-24T20:43:00Z",
-    "updated": "2022-06-27T22:38:01Z",
+    "updated": "2022-07-31T21:53:52Z",
     "updatedBy": "emartinez@dnanexus.com",
     "createdBy": "emartinez@dnanexus.com",
-    "version": 7,
+    "version": 9,
     "hasAcl": false,
     "isFolder": false,
     "folderId": 0,
@@ -24,16 +24,17 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": false,
-        "canEdit": false,
-        "canDelete": false
+        "canAdd": true,
+        "canEdit": true,
+        "canDelete": true
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    }
+    },
+    "isPublic": false
   },
   "dashboard": {
     "annotations": {
@@ -61,7 +62,7 @@
     "editable": true,
     "fiscalYearStartMonth": 0,
     "graphTooltip": 0,
-    "iteration": 1656365854142,
+    "iteration": 1659304314569,
     "links": [],
     "liveNow": false,
     "panels": [
@@ -223,7 +224,7 @@
               "uid": "000000001"
             },
             "exemplar": false,
-            "expr": "ssl_expiration_months",
+            "expr": "ssl_expiration_days",
             "format": "table",
             "instant": true,
             "interval": "",
@@ -264,7 +265,7 @@
                 "resource": 11
               },
               "renameByName": {
-                "Value": "Months Until Expiration",
+                "Value": "Days Until Expiration",
                 "instance": "Instance",
                 "not_after": "Expires On",
                 "resource": "Resource"
@@ -277,7 +278,7 @@
               "conversions": [
                 {
                   "destinationType": "number",
-                  "targetField": "Months Until Expiration"
+                  "targetField": "Value"
                 },
                 {
                   "dateFormat": "",
@@ -388,7 +389,7 @@
     "timezone": "",
     "title": "Bastion Certificates",
     "uid": "O3vVLqX7k",
-    "version": 7,
+    "version": 9,
     "weekStart": ""
   }
 }

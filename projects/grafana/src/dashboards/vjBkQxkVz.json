@@ -6,14 +6,14 @@
     "canAdmin": false,
     "canStar": false,
     "canDelete": false,
-    "slug": "bnazarenko",
-    "url": "/dashboards/f/QgP4a_qGz/bnazarenko",
+    "slug": "general-alerting",
+    "url": "/dashboards/f/vjBkQxkVz/general-alerting",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2021-05-27T21:16:05Z",
-    "updated": "2021-05-27T21:26:33Z",
-    "updatedBy": "bnazarenko@dnanexus.com",
-    "createdBy": "bnazarenko@dnanexus.com",
-    "version": 2,
+    "created": "2022-08-02T19:33:40Z",
+    "updated": "2022-08-02T19:33:40Z",
+    "updatedBy": "Anonymous",
+    "createdBy": "Anonymous",
+    "version": 1,
     "hasAcl": false,
     "isFolder": true,
     "folderId": 0,
@@ -37,9 +37,8 @@
     "isPublic": false
   },
   "dashboard": {
-    "schemaVersion": 17,
-    "title": "bnazarenko",
-    "uid": "QgP4a_qGz",
-    "version": 2
+    "title": "General Alerting",
+    "uid": "vjBkQxkVz",
+    "version": 1
   }
 }

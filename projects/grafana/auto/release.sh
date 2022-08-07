@@ -11,14 +11,16 @@ source "$scriptPath/core.sh"
 
 pushd $distPath
 
-# update data sources first.
-for jsonFile in `find $distPath/datasources | grep '.*\.json'`
+# update data sources and folders first
+for entity in "folder" "datasource"
 do
-    # delete each data source if it exists
-    restCommand $username $password $protocol $destination '' "api/datasources/name/`jq -r '.name' $jsonFile`" 'DELETE'
+    echo "Deploying all ${entity}s."
 
-    # redeploy it.
-    restCommand $username $password $protocol $destination "$(jq . $jsonFile)" 'api/datasources' 'POST'
+    for jsonFile in `find $distPath/${entity}s | grep '.*\.json'`
+    do
+        echo "Publishing $jsonFile"
+        restCommand $username $password $protocol $destination "$(jq . $jsonFile)" "api/${entity}s" 'POST' > /dev/null
+    done
 done
 
 # update dashboards next

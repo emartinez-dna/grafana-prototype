@@ -3,18 +3,21 @@
   "orgId": 1,
   "name": "Prometheus",
   "type": "prometheus",
-  "typeName": "Prometheus",
-  "typeLogoUrl": "public/app/plugins/datasource/prometheus/img/prometheus_logo.svg",
+  "typeLogoUrl": "",
   "access": "proxy",
   "url": "https://prometheus-dev.internal.dnanexus.com",
   "user": "",
   "database": "",
   "basicAuth": false,
+  "basicAuthUser": "",
+  "withCredentials": false,
   "isDefault": true,
   "jsonData": {
     "httpMethod": "GET",
     "keepCookies": [],
     "tlsSkipVerify": true
   },
+  "secureJsonFields": {},
+  "version": 13,
   "readOnly": false
 }

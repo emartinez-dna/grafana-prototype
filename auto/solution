@@ -28,6 +28,13 @@ case $action in
         docker-compose up -d
         popd > /dev/null
 
+        while [[ `curl -s http://host.docker.internal:9092/api/health | jq '.database' --raw-output` != 'ok' ]]
+        do
+            echo "Waiting for grafana to start up..."
+            sleep 1
+        done
+        echo "Grafana has started."
+
         for project in $projects
         do
             release-project $project

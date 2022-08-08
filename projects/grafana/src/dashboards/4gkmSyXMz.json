@@ -1,19 +1,19 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "test-headwaters-deployment",
     "url": "/d/4gkmSyXMz/test-headwaters-deployment",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2021-04-19T06:59:01Z",
-    "updated": "2021-04-19T21:40:13Z",
+    "created": "2022-08-08T21:53:56Z",
+    "updated": "2022-08-08T21:53:56Z",
     "updatedBy": "admin",
     "createdBy": "admin",
-    "version": 9,
+    "version": 1,
     "hasAcl": false,
     "isFolder": false,
     "folderId": 0,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {
@@ -548,6 +547,6 @@
     "timezone": "",
     "title": "Test Headwaters Deployment",
     "uid": "4gkmSyXMz",
-    "version": 9
+    "version": 1
   }
 }

@@ -1,19 +1,19 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "api-metrics",
     "url": "/d/b4_d14iiz/api-metrics",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2019-04-12T22:19:05Z",
-    "updated": "2019-04-15T20:38:18Z",
-    "updatedBy": "akundu@dnanexus.com",
+    "created": "2022-08-08T21:53:59Z",
+    "updated": "2022-08-08T21:53:59Z",
+    "updatedBy": "admin",
     "createdBy": "admin",
-    "version": 6,
+    "version": 1,
     "hasAcl": false,
     "isFolder": false,
     "folderId": 0,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {
@@ -1835,6 +1834,6 @@
     "timezone": "",
     "title": "API Metrics",
     "uid": "b4_d14iiz",
-    "version": 6
+    "version": 1
   }
 }

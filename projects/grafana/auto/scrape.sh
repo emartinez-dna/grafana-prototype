@@ -20,7 +20,7 @@ source "$scriptPath/core.sh"
 
 
 declare -a parallelized_commands=()
-uids=`restCommand $username $password $protocol $destination '' 'api/search?query=%' 'GET' | jq '.[].uid' --raw-output`
+uids=`restCommand $username $password $protocol $destination '' 'api/search' 'GET' | jq '.[].uid' --raw-output`
 for uid in $uids
 do
     parallelized_commands+=("source $scriptPath/core.sh; restCommand '$username' '$password' '$protocol' '$destination' '' 'api/dashboards/uid/$uid' 'GET' | jq 'del(.dashboard.id)' > '$out_dir/dashboards/$uid.json'")

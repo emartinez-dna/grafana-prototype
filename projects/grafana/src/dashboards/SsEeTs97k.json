@@ -1,19 +1,19 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "kara-test-opstree-mongodb-dashboard",
     "url": "/d/SsEeTs97k/kara-test-opstree-mongodb-dashboard",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2022-07-27T21:49:15Z",
-    "updated": "2022-07-29T20:55:04Z",
-    "updatedBy": "kspencer@dnanexus.com",
-    "createdBy": "kspencer@dnanexus.com",
-    "version": 3,
+    "created": "2022-08-08T21:53:58Z",
+    "updated": "2022-08-08T21:56:25Z",
+    "updatedBy": "admin",
+    "createdBy": "admin",
+    "version": 2,
     "hasAcl": false,
     "isFolder": false,
     "folderId": 0,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {
@@ -64,7 +63,7 @@
     "fiscalYearStartMonth": 0,
     "gnetId": 16490,
     "graphTooltip": 0,
-    "iteration": 1659118422213,
+    "iteration": 1659995649503,
     "links": [],
     "liveNow": false,
     "panels": [
@@ -1103,8 +1102,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "dark-yellow",
-                  "value": null
+                  "color": "dark-yellow"
                 }
               ]
             },
@@ -1191,8 +1189,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "dark-yellow",
-                  "value": null
+                  "color": "dark-yellow"
                 }
               ]
             },
@@ -1279,8 +1276,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "dark-yellow",
-                  "value": null
+                  "color": "dark-yellow"
                 }
               ]
             },
@@ -1344,8 +1340,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 }
               ]
             }
@@ -1410,8 +1405,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 }
               ]
             }
@@ -1476,8 +1470,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 }
               ]
             }
@@ -1565,8 +1558,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -1656,8 +1648,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -1731,8 +1722,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "semi-dark-blue",
-                  "value": null
+                  "color": "semi-dark-blue"
                 }
               ]
             }
@@ -1823,8 +1813,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -1916,8 +1905,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "dark-yellow",
-                  "value": null
+                  "color": "dark-yellow"
                 }
               ]
             },
@@ -1991,8 +1979,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "semi-dark-blue",
-                  "value": null
+                  "color": "semi-dark-blue"
                 }
               ]
             }
@@ -2080,8 +2067,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 }
               ]
             },
@@ -2178,8 +2164,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "dark-green",
-                  "value": null
+                  "color": "dark-green"
                 }
               ]
             },
@@ -2279,8 +2264,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "semi-dark-orange",
-                  "value": null
+                  "color": "semi-dark-orange"
                 }
               ]
             }
@@ -2369,8 +2353,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "semi-dark-orange",
-                  "value": null
+                  "color": "semi-dark-orange"
                 }
               ]
             }
@@ -2471,8 +2454,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -2547,7 +2529,7 @@
             "type": "prometheus",
             "uid": "000000001"
           },
-          "definition": "label_values(mongodb_up{env=\"$env\"}, instance)",
+          "definition": "label_values(mongodb_up, instance)",
           "hide": 0,
           "includeAll": true,
           "label": "Instance",
@@ -2555,7 +2537,7 @@
           "name": "instance",
           "options": [],
           "query": {
-            "query": "label_values(mongodb_up{env=\"$env\"}, instance)",
+            "query": "label_values(mongodb_up, instance)",
             "refId": "StandardVariableQuery"
           },
           "refresh": 1,
@@ -2672,7 +2654,7 @@
     "timezone": "",
     "title": "Kara Test Opstree/Mongodb Dashboard",
     "uid": "SsEeTs97k",
-    "version": 3,
+    "version": 2,
     "weekStart": ""
   }
 }

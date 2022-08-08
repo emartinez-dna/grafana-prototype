@@ -1,19 +1,19 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "docker-and-system-monitoring",
     "url": "/d/aQmL9ddiz/docker-and-system-monitoring",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2019-04-12T22:19:22Z",
-    "updated": "2022-06-10T00:30:40Z",
-    "updatedBy": "kspencer@dnanexus.com",
+    "created": "2022-08-08T21:53:59Z",
+    "updated": "2022-08-08T21:53:59Z",
+    "updatedBy": "admin",
     "createdBy": "admin",
-    "version": 21,
+    "version": 1,
     "hasAcl": false,
     "isFolder": false,
     "folderId": 0,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {
@@ -2609,7 +2608,7 @@
     "timezone": "browser",
     "title": "Docker and system monitoring",
     "uid": "aQmL9ddiz",
-    "version": 21,
+    "version": 1,
     "weekStart": ""
   }
 }

@@ -1,19 +1,19 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "node-exporter-quickstart-and-dashboard",
     "url": "/d/_h00x7znk/node-exporter-quickstart-and-dashboard",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2021-06-26T00:07:01Z",
-    "updated": "2021-06-26T00:07:57Z",
+    "created": "2022-08-08T21:53:59Z",
+    "updated": "2022-08-08T21:53:59Z",
     "updatedBy": "admin",
     "createdBy": "admin",
-    "version": 2,
+    "version": 1,
     "hasAcl": false,
     "isFolder": false,
     "folderId": 0,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {
@@ -1009,6 +1008,6 @@
     "timezone": "browser",
     "title": "Node Exporter Quickstart and Dashboard",
     "uid": "_h00x7znk",
-    "version": 2
+    "version": 1
   }
 }

@@ -1,19 +1,19 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "vpn-status",
     "url": "/d/VnlCPJrZz/vpn-status",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2020-03-27T21:34:17Z",
-    "updated": "2021-06-16T21:18:20Z",
-    "updatedBy": "dhotlosz@dnanexus.com",
-    "createdBy": "vbarsegyan@dnanexus.com",
-    "version": 23,
+    "created": "2022-08-08T21:53:58Z",
+    "updated": "2022-08-08T21:53:58Z",
+    "updatedBy": "admin",
+    "createdBy": "admin",
+    "version": 1,
     "hasAcl": false,
     "isFolder": false,
     "folderId": 0,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {
@@ -2450,6 +2449,6 @@
     "timezone": "",
     "title": "VPN Status",
     "uid": "VnlCPJrZz",
-    "version": 23
+    "version": 1
   }
 }

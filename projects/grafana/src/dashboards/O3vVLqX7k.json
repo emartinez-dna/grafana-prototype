@@ -1,19 +1,19 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "bastion-certificates",
     "url": "/d/O3vVLqX7k/bastion-certificates",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2022-05-24T20:43:00Z",
-    "updated": "2022-07-31T21:53:52Z",
-    "updatedBy": "emartinez@dnanexus.com",
-    "createdBy": "emartinez@dnanexus.com",
-    "version": 9,
+    "created": "2022-08-08T21:53:58Z",
+    "updated": "2022-08-08T21:53:58Z",
+    "updatedBy": "admin",
+    "createdBy": "admin",
+    "version": 1,
     "hasAcl": false,
     "isFolder": false,
     "folderId": 0,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {
@@ -389,7 +388,7 @@
     "timezone": "",
     "title": "Bastion Certificates",
     "uid": "O3vVLqX7k",
-    "version": 9,
+    "version": 1,
     "weekStart": ""
   }
 }

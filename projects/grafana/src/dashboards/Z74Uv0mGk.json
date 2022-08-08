@@ -1,19 +1,19 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "headwaters-container-monitoring",
     "url": "/d/Z74Uv0mGk/headwaters-container-monitoring",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2020-06-09T21:58:57Z",
-    "updated": "2020-06-12T20:24:49Z",
-    "updatedBy": "dcadwallader@dnanexus.com",
-    "createdBy": "dcadwallader@dnanexus.com",
-    "version": 6,
+    "created": "2022-08-08T21:53:59Z",
+    "updated": "2022-08-08T21:53:59Z",
+    "updatedBy": "admin",
+    "createdBy": "admin",
+    "version": 1,
     "hasAcl": false,
     "isFolder": false,
     "folderId": 0,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {
@@ -2504,6 +2503,6 @@
     "timezone": "browser",
     "title": "Headwaters Container Monitoring",
     "uid": "Z74Uv0mGk",
-    "version": 6
+    "version": 1
   }
 }

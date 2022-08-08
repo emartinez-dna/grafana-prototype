@@ -1,19 +1,19 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "platform-pilot-status",
     "url": "/d/-amBWbVnk/platform-pilot-status",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2021-09-01T00:15:26Z",
-    "updated": "2021-11-17T17:25:50Z",
-    "updatedBy": "dcadwallader@dnanexus.com",
+    "created": "2022-08-08T21:53:56Z",
+    "updated": "2022-08-08T21:53:56Z",
+    "updatedBy": "admin",
     "createdBy": "admin",
-    "version": 51,
+    "version": 1,
     "hasAcl": false,
     "isFolder": false,
     "folderId": 0,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {
@@ -1757,6 +1756,6 @@
     "timezone": "",
     "title": "Platform Pilot Status",
     "uid": "-amBWbVnk",
-    "version": 51
+    "version": 1
   }
 }

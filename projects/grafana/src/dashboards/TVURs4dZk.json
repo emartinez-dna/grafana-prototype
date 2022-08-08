@@ -1,19 +1,19 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "docker-versions",
     "url": "/d/TVURs4dZk/docker-versions",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2019-08-12T22:28:13Z",
-    "updated": "2020-07-20T16:30:32Z",
+    "created": "2022-08-08T21:53:58Z",
+    "updated": "2022-08-08T21:53:58Z",
     "updatedBy": "admin",
     "createdBy": "admin",
-    "version": 16,
+    "version": 1,
     "hasAcl": false,
     "isFolder": false,
     "folderId": 0,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {
@@ -596,6 +595,6 @@
     "timezone": "",
     "title": "Docker Versions",
     "uid": "TVURs4dZk",
-    "version": 16
+    "version": 1
   }
 }

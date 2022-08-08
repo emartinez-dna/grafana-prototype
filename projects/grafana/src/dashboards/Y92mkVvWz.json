@@ -1,18 +1,18 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "docker-and-system-monitoring-update-mutihost",
     "url": "/d/Y92mkVvWz/docker-and-system-monitoring-update-mutihost",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2020-06-09T14:12:42Z",
-    "updated": "2020-06-09T14:12:42Z",
-    "updatedBy": "dcadwallader@dnanexus.com",
-    "createdBy": "dcadwallader@dnanexus.com",
+    "created": "2022-08-08T21:53:58Z",
+    "updated": "2022-08-08T21:53:58Z",
+    "updatedBy": "admin",
+    "createdBy": "admin",
     "version": 1,
     "hasAcl": false,
     "isFolder": false,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "__requires": [

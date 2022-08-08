@@ -1,19 +1,19 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "github-actions-usage",
     "url": "/d/Rny_nz4Gz/github-actions-usage",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2020-07-23T18:04:37Z",
-    "updated": "2021-05-12T15:50:20Z",
+    "created": "2022-08-08T21:53:58Z",
+    "updated": "2022-08-08T21:53:58Z",
     "updatedBy": "admin",
     "createdBy": "admin",
-    "version": 29,
+    "version": 1,
     "hasAcl": false,
     "isFolder": false,
     "folderId": 0,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {
@@ -4062,6 +4061,6 @@
     "timezone": "",
     "title": "GitHub Actions Usage",
     "uid": "Rny_nz4Gz",
-    "version": 29
+    "version": 1
   }
 }

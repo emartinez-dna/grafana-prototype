@@ -1,19 +1,19 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "pilot-versions",
     "url": "/d/QjGFnwLWk/pilot-versions",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2020-01-03T19:11:02Z",
-    "updated": "2021-02-23T19:00:46Z",
+    "created": "2022-08-08T21:53:58Z",
+    "updated": "2022-08-08T21:53:58Z",
     "updatedBy": "admin",
     "createdBy": "admin",
-    "version": 16,
+    "version": 1,
     "hasAcl": false,
     "isFolder": false,
     "folderId": 0,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {
@@ -1269,6 +1268,6 @@
     "timezone": "",
     "title": "Pilot Versions",
     "uid": "QjGFnwLWk",
-    "version": 16
+    "version": 1
   }
 }

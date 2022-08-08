@@ -1,40 +1,39 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "test-instance",
     "url": "/d/9Ahra_qGz/test-instance",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2021-05-27T21:27:58Z",
-    "updated": "2021-05-27T21:30:31Z",
-    "updatedBy": "bnazarenko@dnanexus.com",
-    "createdBy": "bnazarenko@dnanexus.com",
-    "version": 2,
+    "created": "2022-08-08T21:53:57Z",
+    "updated": "2022-08-08T21:53:57Z",
+    "updatedBy": "admin",
+    "createdBy": "admin",
+    "version": 1,
     "hasAcl": false,
     "isFolder": false,
-    "folderId": 89,
-    "folderUid": "QgP4a_qGz",
-    "folderTitle": "bnazarenko",
-    "folderUrl": "/dashboards/f/QgP4a_qGz/bnazarenko",
+    "folderId": 0,
+    "folderUid": "",
+    "folderTitle": "General",
+    "folderUrl": "",
     "provisioned": false,
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {
@@ -274,6 +273,6 @@
     "timezone": "",
     "title": "Test Instance",
     "uid": "9Ahra_qGz",
-    "version": 2
+    "version": 1
   }
 }

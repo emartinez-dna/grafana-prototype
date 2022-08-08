@@ -1,19 +1,19 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "docker-and-system-monitoring-local",
     "url": "/d/JRGmTROnk/docker-and-system-monitoring-local",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2021-10-13T20:51:48Z",
-    "updated": "2021-10-13T20:52:39Z",
+    "created": "2022-08-08T21:53:57Z",
+    "updated": "2022-08-08T21:53:57Z",
     "updatedBy": "admin",
     "createdBy": "admin",
-    "version": 3,
+    "version": 1,
     "hasAcl": false,
     "isFolder": false,
     "folderId": 0,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {
@@ -2578,6 +2577,6 @@
     "timezone": "browser",
     "title": "Docker and system monitoring - Local",
     "uid": "JRGmTROnk",
-    "version": 3
+    "version": 1
   }
 }

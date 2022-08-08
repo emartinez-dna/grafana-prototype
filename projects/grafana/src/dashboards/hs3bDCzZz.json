@@ -1,18 +1,18 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "new-dashboard-copy",
     "url": "/d/hs3bDCzZz/new-dashboard-copy",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2019-05-01T20:28:13Z",
-    "updated": "2019-05-01T20:28:13Z",
-    "updatedBy": "akundu@dnanexus.com",
-    "createdBy": "akundu@dnanexus.com",
+    "created": "2022-08-08T21:53:59Z",
+    "updated": "2022-08-08T21:53:59Z",
+    "updatedBy": "admin",
+    "createdBy": "admin",
     "version": 1,
     "hasAcl": false,
     "isFolder": false,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {

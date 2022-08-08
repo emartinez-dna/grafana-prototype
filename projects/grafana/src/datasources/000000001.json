@@ -6,10 +6,12 @@
   "typeLogoUrl": "",
   "access": "proxy",
   "url": "https://prometheus-dev.internal.dnanexus.com",
+  "password": "",
   "user": "",
   "database": "",
   "basicAuth": false,
   "basicAuthUser": "",
+  "basicAuthPassword": "",
   "withCredentials": false,
   "isDefault": true,
   "jsonData": {
@@ -18,6 +20,6 @@
     "tlsSkipVerify": true
   },
   "secureJsonFields": {},
-  "version": 13,
+  "version": 1,
   "readOnly": false
 }

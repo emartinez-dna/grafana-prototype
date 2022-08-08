@@ -1,19 +1,19 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "apollo-vizserver",
     "url": "/d/wK_1lszWz/apollo-vizserver",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2019-04-29T17:29:15Z",
-    "updated": "2019-11-15T17:29:57Z",
-    "updatedBy": "akundu@dnanexus.com",
-    "createdBy": "akundu@dnanexus.com",
-    "version": 166,
+    "created": "2022-08-08T21:54:01Z",
+    "updated": "2022-08-08T21:54:01Z",
+    "updatedBy": "admin",
+    "createdBy": "admin",
+    "version": 1,
     "hasAcl": false,
     "isFolder": false,
     "folderId": 0,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {
@@ -4209,6 +4208,6 @@
     "timezone": "",
     "title": "Apollo Vizserver",
     "uid": "wK_1lszWz",
-    "version": 166
+    "version": 1
   }
 }

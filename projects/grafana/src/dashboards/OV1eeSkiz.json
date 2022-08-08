@@ -1,16 +1,16 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "slower-compute-dashboard-raw-events",
     "url": "/d/OV1eeSkiz/slower-compute-dashboard-raw-events",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2019-04-12T22:20:13Z",
-    "updated": "2019-04-12T22:20:13Z",
+    "created": "2022-08-08T21:53:58Z",
+    "updated": "2022-08-08T21:53:58Z",
     "updatedBy": "admin",
     "createdBy": "admin",
     "version": 1,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "__requires": [

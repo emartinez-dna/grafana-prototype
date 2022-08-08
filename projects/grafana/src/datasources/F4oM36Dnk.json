@@ -6,10 +6,12 @@
   "typeLogoUrl": "",
   "access": "proxy",
   "url": "https://fips_nginx_prometheus",
+  "password": "",
   "user": "",
   "database": "",
   "basicAuth": false,
   "basicAuthUser": "",
+  "basicAuthPassword": "",
   "withCredentials": false,
   "isDefault": false,
   "jsonData": {
@@ -23,6 +25,6 @@
     "tlsSkipVerify": true
   },
   "secureJsonFields": {},
-  "version": 11,
+  "version": 1,
   "readOnly": false
 }

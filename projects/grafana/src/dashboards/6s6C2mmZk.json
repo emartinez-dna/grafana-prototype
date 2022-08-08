@@ -1,19 +1,19 @@
 {
   "meta": {
     "type": "db",
-    "canSave": false,
-    "canEdit": false,
-    "canAdmin": false,
-    "canStar": false,
-    "canDelete": false,
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
     "slug": "grafana-internal-metrics",
     "url": "/d/6s6C2mmZk/grafana-internal-metrics",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2019-05-03T20:37:50Z",
-    "updated": "2019-10-22T22:58:00Z",
+    "created": "2022-08-08T21:53:57Z",
+    "updated": "2022-08-08T21:53:57Z",
     "updatedBy": "admin",
     "createdBy": "admin",
-    "version": 6,
+    "version": 1,
     "hasAcl": false,
     "isFolder": false,
     "folderId": 0,
@@ -24,17 +24,16 @@
     "provisionedExternalId": "",
     "annotationsPermissions": {
       "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
       },
       "organization": {
         "canAdd": false,
         "canEdit": false,
         "canDelete": false
       }
-    },
-    "isPublic": false
+    }
   },
   "dashboard": {
     "annotations": {
@@ -989,6 +988,6 @@
     "timezone": "",
     "title": "Grafana Internal Metrics",
     "uid": "6s6C2mmZk",
-    "version": 6
+    "version": 1
   }
 }

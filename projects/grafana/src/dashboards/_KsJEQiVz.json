@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "type": "db",
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "canDelete": true,
+    "slug": "azure",
+    "url": "/dashboards/f/_KsJEQiVz/azure",
+    "expires": "0001-01-01T00:00:00Z",
+    "created": "2022-08-24T20:59:11Z",
+    "updated": "2022-08-24T20:59:11Z",
+    "updatedBy": "admin",
+    "createdBy": "admin",
+    "version": 1,
+    "hasAcl": false,
+    "isFolder": true,
+    "folderId": 0,
+    "folderUid": "",
+    "folderTitle": "General",
+    "folderUrl": "",
+    "provisioned": false,
+    "provisionedExternalId": "",
+    "annotationsPermissions": {
+      "dashboard": {
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
+      },
+      "organization": {
+        "canAdd": false,
+        "canEdit": false,
+        "canDelete": false
+      }
+    }
+  },
+  "dashboard": {
+    "schemaVersion": 17,
+    "title": "Azure",
+    "uid": "_KsJEQiVz",
+    "version": 1
+  }
+}

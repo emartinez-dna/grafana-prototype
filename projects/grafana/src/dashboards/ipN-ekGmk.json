@@ -6,11 +6,11 @@
     "canAdmin": true,
     "canStar": true,
     "canDelete": true,
-    "slug": "salesforced",
-    "url": "/d/qdC-3hgmk/salesforced",
+    "slug": "audit-log-processor-dynamodb",
+    "url": "/d/ipN-ekGmk/audit-log-processor-dynamodb",
     "expires": "0001-01-01T00:00:00Z",
-    "created": "2022-08-24T20:59:16Z",
-    "updated": "2022-08-24T20:59:16Z",
+    "created": "2022-08-24T20:59:15Z",
+    "updated": "2022-08-24T20:59:15Z",
     "updatedBy": "admin",
     "createdBy": "admin",
     "version": 1,
@@ -49,6 +49,7 @@
         }
       ]
     },
+    "description": "Kinesis Client Library DynamoDB table for the Audit Log Processor component",
     "editable": true,
     "gnetId": null,
     "graphTooltip": 0,
@@ -60,190 +61,14 @@
         "dashLength": 10,
         "dashes": false,
         "datasource": "Prometheus",
-        "description": "Every heartbeat corresponds to 1 salesforced event loop iteration",
         "fill": 1,
         "gridPos": {
-          "h": 7,
-          "w": 18,
+          "h": 9,
+          "w": 12,
           "x": 0,
-          "y": 0
-        },
-        "id": 1,
-        "legend": {
-          "alignAsTable": false,
-          "avg": true,
-          "current": true,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "links": [],
-        "nullPointMode": "null",
-        "percentage": false,
-        "pointradius": 1,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": true,
-        "targets": [
-          {
-            "expr": "increase(salesforced_heartbeats_total[1h])",
-            "format": "time_series",
-            "hide": false,
-            "instant": false,
-            "interval": "",
-            "intervalFactor": 2,
-            "refId": "A"
-          }
-        ],
-        "thresholds": [],
-        "timeFrom": null,
-        "timeShift": null,
-        "title": "Heartbeats",
-        "tooltip": {
-          "shared": true,
-          "sort": 0,
-          "value_type": "individual"
-        },
-        "type": "graph",
-        "xaxis": {
-          "buckets": null,
-          "mode": "time",
-          "name": null,
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "format": "none",
-            "label": "heartbeats/hour",
-            "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true
-          },
-          {
-            "format": "short",
-            "label": null,
-            "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true
-          }
-        ]
-      },
-      {
-        "cacheTimeout": null,
-        "colorBackground": true,
-        "colorValue": false,
-        "colors": [
-          "#d44a3a",
-          "rgba(237, 129, 40, 0.89)",
-          "#299c46"
-        ],
-        "datasource": "Prometheus",
-        "description": "The salesforced's health status. Green (1) if a heartbeat has been received in the last hour, red (0) otherwise",
-        "format": "none",
-        "gauge": {
-          "maxValue": 1,
-          "minValue": 0,
-          "show": false,
-          "thresholdLabels": false,
-          "thresholdMarkers": false
-        },
-        "gridPos": {
-          "h": 7,
-          "w": 6,
-          "x": 18,
           "y": 0
         },
         "id": 2,
-        "interval": null,
-        "links": [],
-        "mappingType": 1,
-        "mappingTypes": [
-          {
-            "name": "value to text",
-            "value": 1
-          },
-          {
-            "name": "range to text",
-            "value": 2
-          }
-        ],
-        "maxDataPoints": 100,
-        "nullPointMode": "connected",
-        "nullText": null,
-        "postfix": "",
-        "postfixFontSize": "50%",
-        "prefix": "",
-        "prefixFontSize": "50%",
-        "rangeMaps": [
-          {
-            "from": "null",
-            "text": "N/A",
-            "to": "null"
-          }
-        ],
-        "sparkline": {
-          "fillColor": "rgba(31, 118, 189, 0.18)",
-          "full": false,
-          "lineColor": "rgb(31, 120, 193)",
-          "show": false
-        },
-        "tableColumn": "",
-        "targets": [
-          {
-            "expr": "changes(salesforced_heartbeats_total[1h]) > bool 0",
-            "format": "time_series",
-            "intervalFactor": 2,
-            "refId": "A"
-          }
-        ],
-        "thresholds": "0.5, 0.5",
-        "title": "Health status",
-        "type": "singlestat",
-        "valueFontSize": "80%",
-        "valueMaps": [
-          {
-            "op": "=",
-            "text": "N/A",
-            "value": "null"
-          },
-          {
-            "op": "=",
-            "text": "DOWN",
-            "value": "0"
-          },
-          {
-            "op": "=",
-            "text": "UP",
-            "value": "1"
-          }
-        ],
-        "valueName": "current"
-      },
-      {
-        "aliasColors": {},
-        "bars": true,
-        "dashLength": 10,
-        "dashes": false,
-        "datasource": "Prometheus",
-        "description": "Number of failed connections from salesforced to salesforce",
-        "fill": 1,
-        "gridPos": {
-          "h": 7,
-          "w": 24,
-          "x": 0,
-          "y": 7
-        },
-        "id": 3,
         "legend": {
           "avg": false,
           "current": false,
@@ -253,7 +78,7 @@
           "total": false,
           "values": false
         },
-        "lines": false,
+        "lines": true,
         "linewidth": 1,
         "links": [],
         "nullPointMode": "null",
@@ -267,17 +92,30 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "increase(salesforced_bad_sf_conns_total[1h])",
+            "expr": "aws_dynamodb_consumed_write_capacity_units_sum{table_name=\"dx-auditlog-processor-vprod\"}",
             "format": "time_series",
-            "interval": "1h",
-            "intervalFactor": 2,
+            "intervalFactor": 1,
+            "legendFormat": "Consumed Write Capacity Units",
             "refId": "A"
+          },
+          {
+            "expr": "aws_dynamodb_provisioned_write_capacity_units_sum{table_name=\"dx-auditlog-processor-vprod\"}",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "legendFormat": "Provisioned Write Capacity Units",
+            "refId": "B"
+          },
+          {
+            "expr": "",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "refId": "C"
           }
         ],
         "thresholds": [],
         "timeFrom": null,
         "timeShift": null,
-        "title": "Failed salesforced-to-salesforce connections",
+        "title": "Write Capacity",
         "tooltip": {
           "shared": true,
           "sort": 0,
@@ -294,7 +132,7 @@
         "yaxes": [
           {
             "format": "short",
-            "label": "connections/minute",
+            "label": "Write Capacity Units",
             "logBase": 1,
             "max": null,
             "min": null,
@@ -306,23 +144,22 @@
             "logBase": 1,
             "max": null,
             "min": null,
-            "show": true
+            "show": false
           }
         ]
       },
       {
         "aliasColors": {},
-        "bars": true,
+        "bars": false,
         "dashLength": 10,
         "dashes": false,
         "datasource": "Prometheus",
-        "description": "The number of change requests processed by the salesforced, by fulfillment status code",
         "fill": 1,
         "gridPos": {
-          "h": 7,
+          "h": 9,
           "w": 12,
-          "x": 0,
-          "y": 14
+          "x": 12,
+          "y": 0
         },
         "id": 4,
         "legend": {
@@ -334,31 +171,38 @@
           "total": false,
           "values": false
         },
-        "lines": false,
+        "lines": true,
         "linewidth": 1,
         "links": [],
         "nullPointMode": "null",
         "percentage": false,
-        "pointradius": 1,
+        "pointradius": 5,
         "points": false,
         "renderer": "flot",
         "seriesOverrides": [],
         "spaceLength": 10,
-        "stack": true,
+        "stack": false,
         "steppedLine": false,
         "targets": [
           {
-            "expr": "sum(increase(salesforced_fulfillments_total[1h])) by (code)",
+            "expr": "aws_dynamodb_consumed_read_capacity_units_sum{table_name=\"dx-auditlog-processor-vprod\"}",
             "format": "time_series",
-            "interval": "1h",
-            "intervalFactor": 2,
+            "intervalFactor": 1,
+            "legendFormat": "Consumed Read Capacity",
             "refId": "A"
+          },
+          {
+            "expr": "aws_dynamodb_provisioned_read_capacity_units_sum{table_name=\"dx-auditlog-processor-vprod\"}",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "legendFormat": "Provisioned Read Capacity",
+            "refId": "B"
           }
         ],
         "thresholds": [],
         "timeFrom": null,
         "timeShift": null,
-        "title": "Change requests by fulfillment status code",
+        "title": "Read Capacity",
         "tooltip": {
           "shared": true,
           "sort": 0,
@@ -375,7 +219,7 @@
         "yaxes": [
           {
             "format": "short",
-            "label": "requests/minute",
+            "label": "Read Capacity Units",
             "logBase": 1,
             "max": null,
             "min": null,
@@ -387,25 +231,24 @@
             "logBase": 1,
             "max": null,
             "min": null,
-            "show": true
+            "show": false
           }
         ]
       },
       {
         "aliasColors": {},
-        "bars": true,
+        "bars": false,
         "dashLength": 10,
         "dashes": false,
         "datasource": "Prometheus",
-        "description": "The number of fulfilled change requests, by action/resource",
         "fill": 1,
         "gridPos": {
-          "h": 7,
+          "h": 9,
           "w": 12,
-          "x": 12,
-          "y": 14
+          "x": 0,
+          "y": 9
         },
-        "id": 5,
+        "id": 6,
         "legend": {
           "avg": false,
           "current": false,
@@ -415,12 +258,12 @@
           "total": false,
           "values": false
         },
-        "lines": false,
+        "lines": true,
         "linewidth": 1,
         "links": [],
         "nullPointMode": "null",
         "percentage": false,
-        "pointradius": 1,
+        "pointradius": 5,
         "points": false,
         "renderer": "flot",
         "seriesOverrides": [],
@@ -429,17 +272,24 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "sum(increase(salesforced_fulfillments_total{code=\"200\"}[1h])) by (resource, action)",
+            "expr": "avg(aws_dynamodb_successful_request_latency_average{operation=~\"BatchWriteItem|PutItem|DeleteItem|UpdateItem\",table_name=\"dx-auditlog-processor-vprod\"})",
             "format": "time_series",
-            "interval": "1h",
             "intervalFactor": 1,
+            "legendFormat": "Average Write Latency (ms)",
             "refId": "A"
+          },
+          {
+            "expr": "avg(aws_dynamodb_successful_request_latency_average{operation=~\"Query|GetItem|BatchGetItem|Scan\", table_name=\"dx-auditlog-processor-vprod\"})",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "legendFormat": "Average Read Latency (ms)",
+            "refId": "B"
           }
         ],
         "thresholds": [],
         "timeFrom": null,
         "timeShift": null,
-        "title": "Fulfillments by action/resource",
+        "title": "Request Latency",
         "tooltip": {
           "shared": true,
           "sort": 0,
@@ -456,7 +306,7 @@
         "yaxes": [
           {
             "format": "short",
-            "label": "fulfillments/minute",
+            "label": "Average Latency (ms)",
             "logBase": 1,
             "max": null,
             "min": null,
@@ -468,20 +318,102 @@
             "logBase": 1,
             "max": null,
             "min": null,
+            "show": false
+          }
+        ]
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": null,
+        "fill": 1,
+        "gridPos": {
+          "h": 9,
+          "w": 12,
+          "x": 12,
+          "y": 9
+        },
+        "id": 8,
+        "legend": {
+          "avg": false,
+          "current": false,
+          "max": false,
+          "min": false,
+          "show": true,
+          "total": false,
+          "values": false
+        },
+        "lines": true,
+        "linewidth": 1,
+        "links": [],
+        "nullPointMode": "null",
+        "percentage": false,
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "expr": "aws_dynamodb_throttled_requests_sum{table_name=\"dx-auditlog-processor-vprod\"}",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "legendFormat": "Throttled Requests",
+            "refId": "A"
+          }
+        ],
+        "thresholds": [],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Throttled Requests",
+        "tooltip": {
+          "shared": true,
+          "sort": 0,
+          "value_type": "individual"
+        },
+        "type": "graph",
+        "xaxis": {
+          "buckets": null,
+          "mode": "time",
+          "name": null,
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "format": "short",
+            "label": "Throttled Requests",
+            "logBase": 1,
+            "max": null,
+            "min": null,
             "show": true
+          },
+          {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": false
           }
         ]
       }
     ],
-    "refresh": "5s",
     "schemaVersion": 16,
     "style": "dark",
-    "tags": [],
+    "tags": [
+      "audit-log",
+      "data-team"
+    ],
     "templating": {
       "list": []
     },
     "time": {
-      "from": "now-24h",
+      "from": "now-1h",
       "to": "now"
     },
     "timepicker": {
@@ -510,8 +442,8 @@
       ]
     },
     "timezone": "",
-    "title": "Salesforced",
-    "uid": "qdC-3hgmk",
+    "title": "Audit Log Processor - DynamoDB",
+    "uid": "ipN-ekGmk",
     "version": 1
   }
 }
